@@ -1,0 +1,188 @@
+==============================================================================
+
+
+           X-Plot  --  a program for visualizing complex functions
+
+
+                 Copyright (C) 1996-2011 Martin Eskildsen
+
+
+==============================================================================
+
+This repository contains X-Plot, an interactive visualization program for
+complex algebra. The program is quite old, circa 1995-1996 and was written in C++
+for the Motif X toolkit. I've ported it to an up-to-date Linux distribution and
+published the sources and build instructions for Ubuntu 11.04.
+
+While quite dated, I still believe the software is interesting and -- given the
+proper formula and input object -- capable of producing beautiful output.
+
+The program was developed for the "Analyse 4" course taught at the Technical
+University of Denmark as part of the required curriculum for the M.Sc. degree.
+
+The code, as it stands today, compiles and runs on Ubuntu 11.04 and seems
+reasonably stable. There's some old cruft left around today that some simple
+code refactoring can remove. If I get the time, I will. This version is simply
+the "Lets Get The Code Out" release -- if I don't do it now, I may never get
+around to it again...   :-)
+
+
+
+LICENSE (short version; see file COPYING for the full version)
+--------------------------------------------------------------
+
+    X-Plot  --  a program for visualizing complex functions
+
+    Copyright (C) 1996-2011 Martin Eskildsen.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    Comments, suggestions, questions to:
+    	     Martin Eskildsen
+    	     eskild.opensource@gmail.com
+
+
+    Programming by Martin Eskildsen, (then) student at the
+    Technical University of Denmark.
+
+
+
+NO SUPPORT
+----------
+This piece of software was produced during a number of courses at the
+Technical University of Denmark; as these courses have ended, the
+author can NOT SUPPORT this program except on a best-effort basis!
+You are mostly on your own.
+
+
+
+NO DOCUMENTATION
+----------------
+Apart from the very scarce comments in the code, there is NO source
+code documentation whatsoever. I was in a hurry back then, and that's
+the result.
+
+
+
+NO UPDATES
+----------
+Do not expect updates to be produced. I may do some occasionally (a
+QT port is under consideration). Still, if you have comments, please
+use the above contact address.
+
+
+
+FEATURES
+--------
+Now that these formalia have been noted, here's the feature list:
+
+* X Window based (X11R5/6, Motif 1.2)
+* Can generate output for PostScript printers
+* User's guide in file "howto.tex"
+* Free software! Available via git: git@github.com:eskild/X-Plot.git
+* Visualizes complex functions: enter a function, draw a curve, see
+  the result.
+* User-defined functions and constants.
+* Very interactive.
+* No integrated handling of function branches. The principal branch is
+  always used.
+* Singularities are not handled perfectly. If a singularity arises for
+  a point, it is mapped to infinity (as close as the computer
+  gets). This isn't desirable, but there it is.
+* The most messy source you'll ever encounter (hopefully!)
+
+
+
+FILES AND DIRECTORIES (of special interest)
+-------------------------------------------
+* src/*                 - source code
+* run/*                 - some files necessary for running X-Plot
+* install/*             - where files are put after 'make install'
+
+* src/x.cc              - C++ main() function
+* src/xplot             - executable
+* run/xplot.default.lib	- default library of functions
+* run/xplot.print       - PostScript printer setup file
+* doc/howto.tex         - a "user guide" of sorts
+
+
+PLATFORMS KNOWN TO WORK
+-----------------------
+* (In the, eh, "good old" days: HP-UX 9 and 10; Digital Tru64 Unix on Alpha.)
+* Ubuntu 11.04.
+
+For Ubuntu, you'll need a full C++ and X11 development environment, and
+Open Motif as well. For building the documentation you'll need LaTeX.
+
+It may be possible to get LessTif to work; I tried it years ago, and it was
+almost, but not entirely, functional.
+
+Once upon a time the program also ran on Windows 3.1 and was called WinPlot,
+but I mislaid the relevant source files years ago, so that version is now
+lost. It also explains why the UI parts of the code may look overly
+abstracted -- there actually used to be two UI targets.
+
+
+COMPILER
+--------
+(Back then: Gnu C++ 2.7.2. And Borland C++ 3 on Windows, if my memory serves
+me.)
+
+* Ubuntu: GNU C++ 4.5.
+
+
+
+BUILDING
+--------
+In addition to the usual C++ and X11 development files, you may need this:
+
+* sudo apt-get install libmotif-dev libxt-dev libxext-dev x11proto-print-dev
+
+Then, in the simple case, just run make, perhaps even make -j 4 or more if
+you have a few cores hanging idly around.
+
+Other make targets of interest:
+
+* install - copy files to install directory
+* clean   - clean .o files and such
+
+
+
+RUNNING
+-------
+* make install && cd install && ./xplot &
+
+You now get four windows: A main window, a coordinates window, a domain
+window and a range window. Try this:
+
+* Focus main window, right-click the empty space below the menu bar (yes,
+  really...)
+* In the dialog, enter z^2 and click OK
+* Now move the cursor in the domain window and see how the z=(x,y) coordinates
+  are mapped through z^2 in the range window. The coordinates window shows
+  the numerical values of the mapping
+* Now left-click in the domain window and draw a circle (you can draw other
+  things by first right-clicking in the domain window and choosing the object
+  type). The circle is then mapped into the range window.
+* Controls:
+    - Domain window: Left click: Draw;    right click: config dialog
+    - Range window:  Left click: Nothing; right click: config dialog
+    - Main window:   Left click: Nothing; right click: config dialog (a pattern
+      emerges...)
+    - Domain/Range windows: Shift + left/right click: Center the view at the mouse
+    - Domain/Range windows: Ctrl  + left/right click: Zoom in/out
+* Have fun! And do remember to send me some feedback, good and bad -- but please
+  be serious; life's too short for Internet abuse, isn't it?
+
+--- End of File ---

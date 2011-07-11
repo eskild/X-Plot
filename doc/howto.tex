@@ -1,0 +1,246 @@
+\documentclass[10pt,a4paper]{article}
+
+\parindent 0cm
+\parskip 1cm
+
+\begin{document}
+\centerline{\bf X-Plot version 1.3x}
+\vskip 1cm
+\centerline{\bf Quick Reference Card}
+\vskip 1cm
+\centerline{Programmed by Martin Eskildsen}
+\vskip 1cm
+\centerline{\it Copyright (c) 1994--1996 by}
+\vskip 0.5cm
+\centerline{\it Department of Mathematics, MAT,}
+\centerline{\it Technical University of Denmark}
+
+\parskip 0.5cm
+
+{\bf Welcome} to {\it X-Plot} for Unix! This reference card will give
+you a brief introduction to the operations available in the program
+and how to use them. But, as always, there's no substitute for
+experiments - and we hope you will find X-Plot useful in these areas!
+
+Finally a note about this guide: Whenever you encounter a {\it
+footnote}\footnote{Such as this.}, it contains commands or hints
+specific to the {\it G-bar}\ at DTU.
+
+
+
+{\bf 1. Starting.} X-Polt is started by opening the File Manager, and
+clicking the icon ``{\tt xplot}''. Alternatively you can start it from
+your command shell window by typing ``{\tt \~{}/xplot \&}'' ---
+provided you have the proper command set up\footnote{You can copy the
+start--up script to your own directory with this command: {\tt
+cp~\~{}g0141/xplot/xplot~\~{}}}
+
+
+
+{\bf 2. Stopping.} To end the program, double-click on the little box
+at the upper left corner of the Root Window (the window with the
+program title written at the top), or, activate the window by clicking
+its title and then press the {\tt Alt}-key, hold it down, press the
+{\tt F4} key and then release both keys. Or, select Quit from the File
+menu.
+
+
+
+{\bf 3. What's on the screen.} You are presented with five windows:
+\begin{itemize}
+\item The Root Window which carries the name of the program {\tt
+(X-Plot)}
+\item The Domain Window in which you draw lines, circles, rectangles,
+grids, parameter plots, freehand and concentric circles.
+\item The Range Window which displays the results of the calculations.
+\item The Coordinates Window which displays the coordinates of the
+mouse pointer when it moves inside the Domain and Range windows.
+\item The Shell window which shows different messages from the
+program.
+\end{itemize}
+All windows can be maximized or minimized as usual.
+
+
+
+{\bf 4. How to refresh the windows.} If the display get cluttered,
+which sometimes happens if you have zoomed in a lot, you need to
+refresh the windows. To do this, you should select {\it Redraw} or
+{\it Refresh} from the window manager menu; if your're insecure on how
+to do this, please consult the system documentation.
+
+
+
+{\bf 5. How to enter a formula.} To enter a formula, move the mouse
+pointer to the Root Window and below the menu bar. Then press the
+Right mouse button, and a dialog box with the current mapping function
+will appear. Then you can enter the formula, which must be a function
+of the complex variable $z$. When you're done, you can press:
+\begin{itemize}
+\item {\tt [Ok]} to use the formula for new objects only, or
+\item {\tt [Recalculate]} to use the formula on all existing objects.
+\end{itemize}
+
+
+
+{\bf 6. How to create a new object.} For all types of object, except
+the parameter plot, move the mouse pointer to the Domain Window, press
+the left mouse button, hold it down and move the mouse. While you drag
+the mouse, some information about the new object is shown in the
+Coordinates Window. When you're done release the mouse button. Then
+the object will be mapped to the Range Window. If the Range Window
+doesn't seem to change, it's probably because the points are outside
+the window. Then you could try to {\it Autoscale} (see below) to fit
+the results to the Range Window.
+
+The procedure is different for parameter plots: Here you click once in
+the domain window. This makes a dialog appear, in which you enter: the
+parameter function $f(t)$, the range of $t$, and the step size of
+$t$. When you then press the {\tt [Ok]} button, the parameter plot is
+drawn in the Domain Window, and then mapped into the Range Window.
+
+
+
+{\bf 7. How to change the type of object.} Move to the Domain Window
+and press the right mouse button. Then a dialog box will appear. To
+the left in the dialog box, you can select a type of object among the
+different possibilities.
+
+
+
+{\bf 8. How to change the number of points per object.} Move to the
+Domain Window and press the right mouse button. Then move to the
+dialog box and click the left mouse button at the input field to the
+right of the type of object and enter a new value. Then click {\tt
+[Ok]}.  (This only affects new objects.) Note that you can't enter any
+values for the types Parameter Plot and Freehand.
+
+
+
+{\bf 9. How to change the grid distances.} Move to the Domain Window
+and press the right mouse button. In the dialog box, move to the Delta
+area and click on the {\it Grid X} or {\it Grid Y} input field. After
+editing, click {\tt [Ok]}. Note that this only affects new objects.
+
+
+
+{\bf 10. How to change the distance between concentric circles.} Move
+to the Domain Window and press the right mouse button. In the dialog
+box, move to the Delta area and click on the {\it Radius} input field.
+After editing, click {\tt [Ok]}. This only affects new objects.
+
+
+
+{\bf 11. How to turn axis on or off.} Move the mouse pointer to the
+window you want to change the axis setting of.  Then click the right
+mouse button. When the dialog box appears, click the {\tt [Axis]}
+button in the Options area.
+
+
+
+{\bf 12. How to turn coordinates on or off.} Move the mouse pointer to
+the window you want to change the coordinates setting of. Then click
+the right mouse button. When the dialog box appears, click the {\tt
+[Coordinates]} button in the Options area.
+
+
+
+{\bf 13. How to zoom in or out.} This can be done in two ways: With
+the dialog box or with the mouse.
+\begin{itemize}
+\item Move the mouse pointer to the window you want to zoom in or out
+on.  Then click the right mouse button. When the dialog box appears,
+click the {\tt [Zoom In]} or {\tt [Zoom Out]} button in the Options
+area.
+\item With the mouse: Move to the window you want to zoom on. Then
+press the {\it Control} key on the keyboard and hold it down. Then
+press the left or right mouse button to zoom in or out. Finally
+release the {\it Control} key.
+\end{itemize}
+
+
+
+{\bf 14. How to zoom in on an area.} Move the mouse pointer to the
+window you want to zoom in at. Then press the right mouse button. When
+the dialog box appears, click {\tt [Zoom Area]}. Then use the mouse as
+if you were creating a new object.
+
+
+
+{\bf 15. How to autoscale.} Move the mouse pointer to the window you
+want to zoom in at. Then press the right mouse button. When the dialog
+box appears, click {\tt [Autoscale]}.
+
+
+
+{\bf 16. How to center the display.} Move the mouse pointer to the
+window you want to center at. Then press the {\it Shift} key on the
+keyboard and hold it down. Then press the left mouse button at the
+point you want centered. Finally release the {\it Shift} key.
+
+
+
+{\bf 17. How to draw Points in the Range Window.} Move the mouse
+pointer to the Range Window and press the right mouse button.  Then
+click {\tt [Points]} in the drawing mode area.
+
+
+
+{\bf 18. How to draw Lines in the Range Window.} Move the mouse
+pointer to the Range Window and press the right mouse button.  Then
+click {\tt [Lines]} in the drawing mode area.
+
+
+
+{\bf 19. How to draw Directed Objects in the Domain Window.} Move the
+mouse pointer to the Domain Window and press the right mouse
+button. Then click {\tt [Directed Lines]} in the options area and then
+click [Close]. Note that the {\tt [Param.\ as Points]} option ``wins''
+over {\tt [Directed Lines]} in case of the types Iteration, Freehand
+and Parameter Plot.
+
+
+
+{\bf 20. How to draw Directed Lines in the Range Window.} Move the
+mouse pointer to the Range Window and press the right mouse button.
+Then click {\tt [Directed Objects]} in the drawing mode area.
+
+
+
+{\bf 21. How to draw as points in the Domain Window.} This option is
+only of interest in case of the types Iteration, Freehand and
+Parameter Plot. Move the mouse pointer to the Domain Window and press
+the right mouse button. Then click {\tt [Param.\ as Points]} in the
+Options area.
+
+
+
+{\bf 22. How to clear the windows.} Select {\tt New} from the {\tt
+File} menu in the Root Window.
+
+
+
+{\bf 23. How to load a library.} Select {\tt Load...} from the {\tt
+File} menu in the Root Window. Note that in the current version, this
+operation isn't perfectly stable; you shouldn't load the same library
+over and over, as this might confuse the program.
+
+
+
+{\bf 24. How to print.}\footnote{The printout is found in 302/43.}
+Select {\tt Print} from the {\tt File} menu. This pops up a window
+where the formula is written. Here you can add your own text, both
+before and after the function $f(z)=\dots$\ A newline is produced by
+the symbol ``{\tt \#}''; an empty line is produced by the symbol
+``{\tt \#\#}''.
+
+
+
+{\bf 25. How to change the print command.} Select {\tt Change
+Printer...} from the {\tt File} menu. A window opens, where you can
+write your Unix print command prefix\footnote{Such as {\tt lp
+-dgps1}}.
+
+
+
+\end{document}
+

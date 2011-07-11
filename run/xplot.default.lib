@@ -1,0 +1,72 @@
+###############################################################################
+#
+#           X-PLOT/WINPLOT VERSION 1.0 LIBRARY FILE
+#
+# This file is a library of functions and constants for use
+# with X-Plot version 1.x.
+# Please note the following points:
+#
+# 1. Lines, such as these, starting with a '#' are comments.
+# 2. Empty lines are allowed.
+# 3. An expression must not span more than one line.
+# 4. Two types of expressions are allowed: Constant and
+#    formula expressions.
+# 5. Forward references are not allowed, ie. don't use a
+#    constant or function before you've declared it.
+#    Note! Is is possible to violate this rule by loading
+#    the same file after having made modifications. This,
+#    however, is only a feaure of version 1.x and will thus
+#    disappear in the future.
+# 6. Constants can't use function expressions, ie.
+#      a = sin(0.33)
+#    is illegal.
+# 7. Operators and symbols available are (normal precedence applies):
+#	^	exponent	z^2
+#	( )	paranthesis	(z*(1+i)+3)/4
+#	*	multiply	z*2
+#	/	divide		z/2
+#	+	add		z+i
+#	-	subtract	z-i
+# 8. Predefined functions:
+#	Arg		argument
+#	acos	*	arcus cosinus
+#	asin	*	arcus sinus
+#	atan	*	arcus tangens
+#	conj		complex conjugate
+#	cos		cosine
+#	cosh		hyp. cosine
+#	exp		e^z
+#	im		imaginary part
+#	log		natural log
+#	log10	*	base 10 log
+#	norm		norm
+#	random		pseudo-random value between 0 and 1.
+#	re		real part
+#	sin		sine
+#	sinh		hyp. sine
+#	sqrt		square root
+#	tan	*	tangens
+#	tanh	*	hyp. tangens
+#    Functions marked with '*' are only available in WinPlot.
+# 9. Predefined constants:
+#	e	(2.7182..., 0)
+#	i	(0, 1)
+#	pi	(3.1415..., 0)
+#
+###############################################################################
+
+# Constants (expand as you like):
+
+pi2=2*pi
+pi4=4*pi
+ipi=i*pi
+ipi2=2*i*pi
+ipi4=4*i*pi
+
+# Formulas (expand as you like):
+
+inv(z)=1/z
+sq(z)=z*z
+tan(z)=sin(z)/cos(z)
+
+# End of file.

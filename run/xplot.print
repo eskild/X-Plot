@@ -1,0 +1,31 @@
+#############################################################################
+#									    #
+#      These are the PostScript printer settings for X-Plot version 1.x     #
+#									    #
+#############################################################################
+
+# The print-command prefix. It's used to invoke a print program.
+PRINT_COMMAND_PREFIX	= lpr -Pps
+#PRINT_COMMAND_PREFIX	= ghostview
+
+# Paper dimensions (eg. 11" for 11 inch; 27.9 for 27.9 cm):
+PRINT_PAPER_WIDTH	= 29.8
+PRINT_PAPER_HEIGHT	= 21
+
+# Printer resolution
+PRINT_DPI		= 300
+
+# Margins:
+PRINT_MARGIN_TOP	= 3
+PRINT_MARGIN_BOTTOM	= 1
+PRINT_MARGIN_LEFT	= 1
+PRINT_MARGIN_RIGHT	= 1
+PRINT_MARGIN_WINDOWS	= 1.5
+
+# PostScript coordinate translation string: Landscape, A4, (0,0) at lower left:
+PRINT_PS_COORDSETUP	= 90 rotate 0 PAPERHEIGHT neg translate
+
+# Default output file:
+PRINT_OUTPUT_FILE	= xplot.graphs.ps
+
+# End Of File
